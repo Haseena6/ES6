@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>ES6 Map</h2>
+
+<p id="one"></p>
+<p id="two"></p>
+<p id="three"></p>
+<p id="four"></p>
+<p id="five"></p>
+
+<script>
+
+let text="";
+const details = new Map([
+  ["haseena","java"],
+  ["begum", "c#"],
+  ["kabeer", "python"]
+]);
+
+document.getElementById("one").innerHTML ="The size property returns the number of elements in a Map : <br>"+ details.size;
+document.getElementById("two").innerHTML ="The get() method gets the value of a key in a Map :<br>"+ details .get("haseena");
+document.getElementById("three").innerHTML ="The has() method returns true if a key exists in a Map :<br>"+ details .has("haseena");
+document.getElementById("four").innerHTML ="The delete() method removes a Map element :<br>"+ details .delete("haseena");
+details.forEach(function(value, key) {
+    text+=key + " " + value+"<br>";
+});
+document.getElementById("five").innerHTML =text;
+</script>
+
+
+</body>
+</html>
